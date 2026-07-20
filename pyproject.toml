@@ -1,0 +1,13 @@
+[project]
+name = "driftfilter"
+version = "0.1.0"
+description = "A forward-only prototype filter for classifiers whose world moves after deployment."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "Ahmed Doghri"}]
+keywords = ["machine-learning", "research", "machine learning", "benchmark"]
+
+[project.urls]
+Homepage = "https://adoghri.com"
+Repository = "https://github.com/ahmeddoghri/driftfilter"
