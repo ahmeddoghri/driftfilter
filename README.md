@@ -1,5 +1,9 @@
 # driftfilter
 
+[![tests](https://github.com/ahmeddoghri/driftfilter/actions/workflows/tests.yml/badge.svg)](https://github.com/ahmeddoghri/driftfilter/actions/workflows/tests.yml) [![case study](https://img.shields.io/badge/case%20study-adoghri.com-e0703e)](https://adoghri.com/project-37.html)
+
+![driftfilter](docs/cover.jpg)
+
 **A forward-only prototype filter for classifiers whose world moves after deployment.**
 
 A classifier frozen at training time is a GPS that refuses to reroute. The world drifts — user behavior shifts, sensor calibration wanders, class centroids migrate across the feature space — and a frozen model keeps confidently pointing at where things used to be. driftfilter doesn't retrain, doesn't need new labels, and doesn't stop and ask for directions. It just nudges its class prototypes toward wherever the incoming data actually is, one point at a time, forward-only.
