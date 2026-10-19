@@ -74,8 +74,9 @@ holdout (30 seeds): original_mean=0.686  original_min=0.617  v2_mean=1.000  v2_m
 Push the drift about 4.4x faster (`total_shift=15`, still linear, still an
 equally plausible real-world drift rate) and the plain-EMA filter falls
 behind: mean `filtered_accuracy` drops to 68.6% across 40 tuning seeds and
-a disjoint 30-seed holdout (evaluated once), min as low as 61.7% — barely
-better than the frozen baseline it's supposed to beat by 22 points.
+a disjoint 30-seed holdout (evaluated once), min as low as 61.7%. The frozen
+baseline averages 56.9% at that speed, so adaptation still helps, but it
+trails the velocity-tracking version below by about 31 points.
 `driftfilter_v2.py` adds a velocity state: it predicts each centroid's
 position forward before comparing, then updates both position and velocity
 from the observed displacement, the same idea a real Kalman filter uses.
